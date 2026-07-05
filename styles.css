@@ -5,8 +5,8 @@
   --muted: #c4beb3;
   --accent: #e2b84c;
   --accent-dark: #7a5a16;
+  --brand-blue: #202a50;
   --panel: #202020;
-  --green: #2e5a46;
   --line: rgba(247, 243, 234, 0.18);
 }
 
@@ -86,8 +86,8 @@ a {
   padding: 140px clamp(20px, 5vw, 64px) 80px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 78% 28%, rgba(46, 90, 70, 0.65), transparent 34%),
-    linear-gradient(135deg, #121212 0%, #1d1b17 50%, #2e2a22 100%);
+    radial-gradient(circle at 78% 28%, rgba(32, 42, 80, 0.78), transparent 34%),
+    linear-gradient(135deg, #121212 0%, #191b25 48%, var(--brand-blue) 100%);
 }
 
 .hero-overlay {
