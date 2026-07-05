@@ -7,6 +7,7 @@ Landing inicial estatica para El Clan, lista para deploy en Vercel.
 - `index.html`: contenido principal de la landing.
 - `styles.css`: estilos responsive y visuales.
 - `assets/brand`: imagenes de marca y recursos visuales del negocio.
+- `assets/icons`: favicons e iconos para navegadores y dispositivos.
 - `vercel.json`: configuracion minima para servir archivos estaticos.
 
 ## Desarrollo local
