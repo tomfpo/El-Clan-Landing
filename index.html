@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="El Clan es una landing simple para presentar comunidad, encuentros y novedades."
+    />
+    <title>El Clan</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegacion principal">
+      <a class="brand" href="#inicio">El Clan</a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#propuesta">Propuesta</a>
+        <a href="#encuentros">Encuentros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Comunidad privada</p>
+          <h1 id="hero-title">El Clan</h1>
+          <p class="hero-copy">
+            Un espacio para juntarse, compartir proyectos y crear experiencias con gente que mueve la misma energia.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contacto">Sumarme</a>
+            <a class="button button-secondary" href="#propuesta">Ver propuesta</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="propuesta" class="section section-light" aria-labelledby="proposal-title">
+        <div class="section-inner two-column">
+          <div>
+            <p class="eyebrow">Que hacemos</p>
+            <h2 id="proposal-title">Encuentros con intencion y una red activa.</h2>
+          </div>
+          <div class="feature-list" aria-label="Beneficios principales">
+            <article>
+              <h3>Experiencias</h3>
+              <p>Activaciones, cenas y momentos pensados para conectar sin vueltas.</p>
+            </article>
+            <article>
+              <h3>Comunidad</h3>
+              <p>Un grupo curado para compartir ideas, oportunidades y proyectos.</p>
+            </article>
+            <article>
+              <h3>Novedades</h3>
+              <p>Un canal claro para enterarte primero de lo que viene.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="encuentros" class="section section-dark" aria-labelledby="meetups-title">
+        <div class="section-inner">
+          <p class="eyebrow">Agenda</p>
+          <h2 id="meetups-title">Proximos encuentros</h2>
+          <div class="event-grid">
+            <article class="event-card">
+              <span>01</span>
+              <h3>Lanzamiento</h3>
+              <p>Presentacion del concepto, invitados iniciales y apertura de la comunidad.</p>
+            </article>
+            <article class="event-card">
+              <span>02</span>
+              <h3>After privado</h3>
+              <p>Un encuentro relajado para cruzar conversaciones, musica y nuevas ideas.</p>
+            </article>
+            <article class="event-card">
+              <span>03</span>
+              <h3>Mesa abierta</h3>
+              <p>Formato reducido para proponer proyectos y activar colaboraciones.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section section-contact" aria-labelledby="contact-title">
+        <div class="section-inner contact-layout">
+          <div>
+            <p class="eyebrow">Contacto</p>
+            <h2 id="contact-title">Queres ser parte?</h2>
+            <p>
+              Dejanos tu mensaje y contanos por que queres sumarte a El Clan.
+            </p>
+          </div>
+          <a class="button button-primary" href="mailto:hola@elclan.com?subject=Quiero%20sumarme%20a%20El%20Clan">
+            Escribir ahora
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>El Clan</span>
+      <span>Landing inicial para deploy en Vercel.</span>
+    </footer>
+  </body>
+</html>
