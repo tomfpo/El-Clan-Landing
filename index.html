@@ -15,12 +15,33 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header" aria-label="Navegacion principal">
+    <header class="site-header" aria-label="Navegacion principal" data-site-header>
       <a class="brand" href="#inicio" aria-label="Papelera El Clan">
-        <img src="./assets/brand/logo-blue.jpg" alt="" />
+        <img src="./assets/brand/logo-blue.jpg" alt="" width="1080" height="1080" />
         <span>Papelera El Clan</span>
       </a>
       <nav class="nav-links" aria-label="Secciones">
+        <a href="#productos">Productos</a>
+        <a href="#atencion">Atencion</a>
+        <a class="nav-links__button" href="#contacto">Contacto</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="mobile-nav"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="sr-only" data-menu-label>Abrir menu</span>
+      </button>
+      <nav
+        id="mobile-nav"
+        class="mobile-nav"
+        aria-label="Secciones"
+        data-mobile-nav
+        hidden
+      >
         <a href="#productos">Productos</a>
         <a href="#atencion">Atencion</a>
         <a href="#contacto">Contacto</a>
@@ -113,5 +134,72 @@
       <span>Papelera El Clan</span>
       <span>Venta por mayor y menor en El Pato.</span>
     </footer>
+    <script>
+      (function () {
+        var siteHeader = document.querySelector("[data-site-header]");
+        var menuToggle = document.querySelector("[data-menu-toggle]");
+        var mobileNav = document.querySelector("[data-mobile-nav]");
+        var menuLabel = document.querySelector("[data-menu-label]");
+
+        if (!siteHeader || !menuToggle || !mobileNav) {
+          return;
+        }
+
+        var setMenuOpen = function (open) {
+          var isOpen = Boolean(open);
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          mobileNav.hidden = !isOpen;
+
+          if (menuLabel) {
+            menuLabel.textContent = isOpen ? "Cerrar menu" : "Abrir menu";
+          }
+        };
+
+        menuToggle.addEventListener("click", function () {
+          var isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+          setMenuOpen(!isOpen);
+        });
+
+        mobileNav.addEventListener("click", function (event) {
+          if (event.target && event.target.tagName === "A") {
+            setMenuOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            setMenuOpen(false);
+          }
+        });
+
+        document.addEventListener("click", function (event) {
+          var isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+          var target = event.target;
+
+          if (isOpen && target && !siteHeader.contains(target)) {
+            setMenuOpen(false);
+          }
+        });
+
+        if (window.matchMedia) {
+          var desktopQuery = window.matchMedia("(min-width: 701px)");
+          var closeOnDesktop = function (event) {
+            if (event.matches) {
+              setMenuOpen(false);
+            }
+          };
+
+          if (desktopQuery.addEventListener) {
+            desktopQuery.addEventListener("change", closeOnDesktop);
+          } else {
+            var legacyAddListener = desktopQuery["add" + "Listener"];
+
+            if (typeof legacyAddListener === "function") {
+              legacyAddListener.call(desktopQuery, closeOnDesktop);
+            }
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
