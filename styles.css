@@ -276,6 +276,17 @@ h3 {
   margin: 0 auto;
 }
 
+.section-heading {
+  margin-bottom: clamp(32px, 5vw, 52px);
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
 .section-light {
   background: var(--paper);
   color: var(--ink);
@@ -302,8 +313,63 @@ h3 {
 }
 
 .feature-list p,
-.section-contact p {
+.section-contact p,
+.rubro-list p {
   color: rgba(18, 18, 18, 0.72);
+}
+
+.section-steps {
+  background: #f0eadf;
+  color: var(--ink);
+}
+
+.section-steps .eyebrow {
+  color: var(--accent-dark);
+}
+
+.step-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.step-card {
+  min-height: 220px;
+  border: 1px solid rgba(18, 18, 18, 0.14);
+  border-radius: 8px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.step-card span {
+  display: inline-block;
+  margin-bottom: 46px;
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.rubros-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+  gap: clamp(36px, 7vw, 90px);
+}
+
+.rubros-layout > * {
+  min-width: 0;
+}
+
+.rubros-layout h2 {
+  font-size: clamp(2rem, 4.3vw, 3.6rem);
+}
+
+.rubro-list {
+  display: grid;
+  gap: 18px;
+}
+
+.rubro-list article {
+  border-top: 1px solid rgba(18, 18, 18, 0.18);
+  padding-top: 22px;
 }
 
 .section-dark {
@@ -419,6 +485,37 @@ h3 {
 
 .contact-actions .button {
   width: 100%;
+}
+
+.contact-actions .button {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(32, 42, 80, 0.28);
+  background: #ffffff;
+  color: var(--brand-primary);
+  box-shadow: 0 10px 22px rgba(18, 18, 18, 0.08);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease;
+}
+
+.contact-actions .button:hover,
+.contact-actions .button:focus-visible {
+  border-color: var(--brand-primary);
+  background: var(--brand-primary);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(var(--brand-primary-rgb), 0.28);
+  transform: translateY(-2px);
+}
+
+.contact-actions .button:active {
+  background: #182040;
+  border-color: #182040;
+  box-shadow: 0 7px 16px rgba(var(--brand-primary-rgb), 0.24);
+  transform: translateY(1px) scale(0.98);
 }
 
 .whatsapp-button {
@@ -555,7 +652,7 @@ h3 {
 
   .mobile-nav:not([hidden]) {
     display: grid;
-    grid-template-rows: repeat(3, minmax(2.75rem, auto));
+    grid-template-rows: repeat(4, minmax(2.75rem, auto));
   }
 
   .mobile-nav a {
@@ -590,8 +687,14 @@ h3 {
 
 @media (max-width: 760px) {
   .two-column,
-  .event-grid {
+  .event-grid,
+  .step-list,
+  .rubros-layout {
     grid-template-columns: 1fr;
+  }
+
+  .rubro-list {
+    gap: 22px;
   }
 
   .contact-layout,
