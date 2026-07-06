@@ -3,8 +3,9 @@
   --ink: #121212;
   --paper: #f7f3ea;
   --muted: #c4beb3;
-  --accent: #e2b84c;
-  --accent-dark: #7a5a16;
+  --secondary: #68c7b7;
+  --secondary-dark: #276b62;
+  --secondary-hover: #83d7ca;
   --brand-primary: #202a50;
   --brand-primary-rgb: 32, 42, 80;
   --panel: #202020;
@@ -71,7 +72,7 @@ a {
 .nav-links a:focus-visible,
 .mobile-nav a:focus-visible,
 .whatsapp-button:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--secondary);
   outline-offset: 4px;
 }
 
@@ -117,13 +118,13 @@ a {
   justify-content: center;
   padding: 0.625rem 0.8125rem;
   border-radius: 0.5rem;
-  background: var(--accent);
+  background: var(--secondary);
   color: var(--ink);
   font-weight: 800;
 }
 
 .nav-links .nav-links__button:hover {
-  background: #edc36d;
+  background: var(--secondary-hover);
   color: var(--ink);
 }
 
@@ -182,7 +183,7 @@ a {
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--accent);
+  color: var(--secondary);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -249,12 +250,12 @@ h3 {
 }
 
 .button-primary {
-  background: var(--accent);
+  background: var(--secondary);
   color: var(--ink);
 }
 
 .button-primary:hover {
-  background: #edc36d;
+  background: var(--secondary-hover);
 }
 
 .button-secondary {
@@ -293,7 +294,7 @@ h3 {
 }
 
 .section-light .eyebrow {
-  color: var(--accent-dark);
+  color: var(--secondary-dark);
 }
 
 .two-column {
@@ -324,70 +325,28 @@ h3 {
 }
 
 .section-steps .eyebrow {
-  color: var(--accent-dark);
+  color: var(--secondary-dark);
 }
 
-.buy-flow {
+.step-list {
   display: grid;
-  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.4fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-  align-items: stretch;
 }
 
-.buy-flow__main,
 .step-card {
+  min-height: 220px;
   border: 1px solid rgba(18, 18, 18, 0.14);
   border-radius: 8px;
   padding: 24px;
   background: rgba(255, 255, 255, 0.5);
 }
 
-.buy-flow__main {
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: var(--brand-primary);
-  color: var(--paper);
-}
-
-.buy-flow__main span,
 .step-card span {
   display: inline-block;
-  color: var(--accent-dark);
-  font-weight: 900;
-}
-
-.buy-flow__main span {
-  margin-bottom: auto;
-  color: var(--accent);
-}
-
-.buy-flow__main h3 {
-  max-width: 440px;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  line-height: 1;
-}
-
-.buy-flow__main p {
-  max-width: 500px;
-  margin-bottom: 0;
-  color: rgba(247, 243, 234, 0.78);
-  font-size: 1.05rem;
-}
-
-.buy-flow__steps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.step-card {
-  min-height: 220px;
-}
-
-.step-card span {
   margin-bottom: 46px;
+  color: var(--secondary-dark);
+  font-weight: 900;
 }
 
 .rubros-layout {
@@ -439,7 +398,7 @@ h3 {
 .event-card span {
   display: inline-block;
   margin-bottom: 54px;
-  color: var(--accent);
+  color: var(--secondary);
   font-weight: 900;
 }
 
@@ -730,8 +689,7 @@ h3 {
 @media (max-width: 760px) {
   .two-column,
   .event-grid,
-  .buy-flow,
-  .buy-flow__steps,
+  .step-list,
   .rubros-layout {
     grid-template-columns: 1fr;
   }
