@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
+      data-site-content="metaDescription"
       content="Papelera El Clan: comercializacion y distribucion de articulos descartables, embalajes, bolsas y papelera en El Pato. WhatsApp: 011 2331-6141."
     />
     <title>Papelera El Clan</title>
@@ -13,12 +14,14 @@
     <link rel="icon" href="./assets/icons/favicon-32x32.png" type="image/png" />
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./assets/site-data.js" defer></script>
+    <script src="./assets/site-render.js" defer></script>
   </head>
   <body>
     <header class="site-header" aria-label="Navegacion principal" data-site-header>
       <a class="brand" href="#inicio" aria-label="Papelera El Clan">
         <img src="./assets/brand/logo-blue.jpg" alt="" width="1080" height="1080" />
-        <span>Papelera El Clan</span>
+        <span data-site-text="brandName">Papelera El Clan</span>
       </a>
       <nav class="nav-links" aria-label="Secciones">
         <a href="#productos">Productos</a>
@@ -54,8 +57,8 @@
         <div class="hero-content">
           <img class="hero-logo" src="./assets/brand/logo-blue.jpg" alt="Papelera El Clan" />
           <p class="eyebrow">Venta por mayor y menor</p>
-          <h1 id="hero-title">Papelera El Clan</h1>
-          <p class="hero-copy">
+          <h1 id="hero-title" data-site-text="brandName">Papelera El Clan</h1>
+          <p class="hero-copy" data-site-text="heroCopy">
             Comercializacion y distribucion de articulos descartables,
             embalajes, bolsas y papelera para comercios, emprendimientos y
             hogares. Atencion en El Pato.
@@ -64,6 +67,7 @@
             <a
               class="button button-primary"
               href="https://wa.me/5491123316141"
+              data-site-href="whatsappUrl"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -114,12 +118,20 @@
             <article class="event-card">
               <span>02</span>
               <h3>Distribucion</h3>
-              <p>Comercializacion y distribucion de articulos descartables y embalajes.</p>
+              <p data-site-text="distributionText">
+                Comercializacion y distribucion de articulos descartables y embalajes.
+              </p>
             </article>
             <article class="event-card">
               <span>03</span>
               <h3>Local</h3>
-              <p>Nos encontras en C. 619 3900, B1893GXJ El Pato.</p>
+              <p>
+                Nos encontras en
+                <span data-site-text="shortAddress">
+                  Calle. 619 (3900), entre Calle 538 y Calle 539, El Pato,
+                  Provincia de Buenos Aires, Argentina.
+                </span>
+              </p>
             </article>
           </div>
         </div>
@@ -130,24 +142,30 @@
           <div>
             <p class="eyebrow">Contacto</p>
             <h2 id="contact-title">Pasa por el local o ubica la direccion.</h2>
-            <p>
-              C. 619 3900, B1893GXJ El Pato, Provincia de Buenos Aires,
-              Argentina.
+            <p data-site-text="fullAddress">
+              Calle. 619 (3900), entre Calle 538 y Calle 539, El Pato,
+              Provincia de Buenos Aires, Argentina.
             </p>
             <ul class="contact-details" aria-label="Datos de contacto">
               <li>
                 <span>WhatsApp</span>
                 <a
                   href="https://wa.me/5491123316141"
+                  data-site-href="whatsappUrl"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-site-text="whatsappDisplay"
                 >
                   011 2331-6141
                 </a>
               </li>
               <li>
                 <span>Horarios</span>
-                <div class="business-hours" aria-label="Horarios de atencion">
+                <div
+                  class="business-hours"
+                  aria-label="Horarios de atencion"
+                  data-site-render="businessHours"
+                >
                   <p><strong>Lunes a viernes</strong>9 a.m. a 1:30 p.m. y 5 p.m. a 8 p.m.</p>
                   <p><strong>Sabado</strong>9 a.m. a 1 p.m.</p>
                   <p><strong>Domingo</strong>Cerrado</p>
@@ -157,6 +175,7 @@
                 <span>Google Maps</span>
                 <a
                   href="https://www.google.com/maps/place/Papelera+El+Clan/@-34.886042,-58.1737089,17z/data=!3m1!4b1!4m6!3m5!1s0x95a2d96fcdf57373:0x3ab7d14e24203caf!8m2!3d-34.8860421!4d-58.168838!16s%2Fg%2F11xs3ndbkm?entry=ttu&amp;g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+                  data-site-href="mapsUrl"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -167,15 +186,17 @@
                 <span>Instagram</span>
                 <a
                   href="https://www.instagram.com/papeleraelclan/"
+                  data-site-href="instagramUrl"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-site-text="instagramDisplay"
                 >
                   @papeleraelclan
                 </a>
               </li>
               <li>
                 <span>Valoracion</span>
-                <strong>5.0 en Google Maps (14 opiniones)</strong>
+                <strong data-site-text="googleRating">5.0 en Google Maps (14 opiniones)</strong>
               </li>
             </ul>
           </div>
@@ -183,6 +204,7 @@
             <a
               class="button button-primary"
               href="https://wa.me/5491123316141"
+              data-site-href="whatsappUrl"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -191,6 +213,7 @@
             <a
               class="button button-secondary"
               href="https://www.google.com/maps/place/Papelera+El+Clan/@-34.886042,-58.1737089,17z/data=!3m1!4b1!4m6!3m5!1s0x95a2d96fcdf57373:0x3ab7d14e24203caf!8m2!3d-34.8860421!4d-58.168838!16s%2Fg%2F11xs3ndbkm?entry=ttu&amp;g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+              data-site-href="mapsUrl"
               target="_blank"
               rel="noreferrer"
             >
@@ -199,6 +222,7 @@
             <a
               class="button button-secondary"
               href="https://www.instagram.com/papeleraelclan/"
+              data-site-href="instagramUrl"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -210,9 +234,11 @@
       <a
         class="whatsapp-button"
         href="https://wa.me/5491123316141"
+        data-site-href="whatsappUrl"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp al 011 2331-6141"
+        data-site-label="whatsappAria"
       >
         <svg
           class="whatsapp-button__icon"
@@ -229,8 +255,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>Papelera El Clan</span>
-      <span>Venta por mayor y menor en El Pato.</span>
+      <span data-site-text="brandName">Papelera El Clan</span>
+      <span data-site-text="footerTagline">Venta por mayor y menor en El Pato.</span>
     </footer>
     <script>
       (function () {
