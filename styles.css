@@ -69,7 +69,8 @@ a {
 .brand:focus-visible,
 .menu-toggle:focus-visible,
 .nav-links a:focus-visible,
-.mobile-nav a:focus-visible {
+.mobile-nav a:focus-visible,
+.whatsapp-button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
@@ -420,6 +421,29 @@ h3 {
   width: 100%;
 }
 
+.whatsapp-button {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 20;
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0.7rem 1.6rem rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.whatsapp-button__icon {
+  display: block;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -583,5 +607,16 @@ h3 {
   .business-hours p {
     grid-template-columns: 1fr;
     gap: 1px;
+  }
+
+  .whatsapp-button {
+    bottom: max(5.75rem, env(safe-area-inset-bottom));
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .whatsapp-button__icon {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }
