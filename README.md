@@ -1,6 +1,6 @@
-# El Clan Landing
+# Landing Papelera El Clan
 
-Landing inicial estatica para El Clan, lista para deploy en Vercel.
+Landing inicial estatica para Papelera El Clan, lista para deploy en Vercel.
 
 ## Estructura
 
