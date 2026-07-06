@@ -19,6 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   background: var(--ink);
@@ -350,6 +356,70 @@ h3 {
   font-size: 1.1rem;
 }
 
+.contact-details {
+  display: grid;
+  gap: 14px;
+  max-width: 560px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-details li {
+  display: grid;
+  gap: 4px;
+}
+
+.contact-details span {
+  color: rgba(18, 18, 18, 0.58);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-details a,
+.contact-details strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.contact-details a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.business-hours {
+  display: grid;
+  gap: 4px;
+}
+
+.business-hours p {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, max-content) 1fr;
+  gap: 8px;
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+.business-hours strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.contact-actions {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 12px;
+  min-width: min(100%, 13.75rem);
+}
+
+.contact-actions .button {
+  width: 100%;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -508,5 +578,10 @@ h3 {
 
   .button {
     width: 100%;
+  }
+
+  .business-hours p {
+    grid-template-columns: 1fr;
+    gap: 1px;
   }
 }
