@@ -1,29 +1,41 @@
 # AGENTS.md
 
-## Proyecto
+## Project
 
-Sitio estatico de Papelera El Clan. Los archivos principales son:
+### Product
 
-- `index.html`: contenido y estructura de la landing.
-- `styles.css`: estilos responsive y visuales.
-- `assets/`: imagenes de marca, favicons e iconos.
-- `vercel.json`: configuracion minima para servir el sitio en Vercel.
+Papelera El Clan is a static Spanish-language commercial landing page.
 
-## Reglas locales
+- `index.html` and `styles.css`: static page and responsive presentation.
+- `assets/`: brand and browser assets.
+- `tools/check-site-data.mjs`: business-data drift check.
 
-- Usar datos del README, archivos versionados o confirmacion del usuario. No inventar beneficios, horarios, zonas, condiciones de envio ni datos comerciales.
-- Mantener textos visibles en espanol natural; se permiten acentos si el archivo queda UTF-8 correcto.
-- Mantener categorias amplias como papelera, bolsas y descartables; no listar productos especificos no confirmados.
-- Priorizar consulta directa cuando exista un dato confirmado. Si falta WhatsApp, telefono o email y la tarea lo pide, se puede dejar una estructura con placeholder claramente pendiente, sin presentarlo como dato real.
-- Conservar la identidad actual, logo, paleta general y estructura simple salvo pedido explicito.
-- Reutilizar assets existentes. Se pueden optimizar si se conserva apariencia, rutas esperadas y marca.
-- No agregar frameworks, build steps ni dependencias salvo pedido explicito.
-- Mantener compatibilidad con apertura directa de `index.html`.
-- Al tocar HTML, conservar semantica, `alt`, labels, meta descripcion y enlaces accesibles.
-- Mantener compatibilidad con Vercel como proyecto estatico tipo `Other`.
+## Source of truth
 
-## Verificacion
+### Business data
 
-- Para cambios visuales o de contenido, abrir `index.html` en navegador y revisar que la pagina cargue sin roturas visibles.
-- No asumir que hay npm, tests automatizados o servidor local obligatorio.
-- No tratar mojibake de PowerShell como corrupcion sin verificar UTF-8 por otro medio.
+- `assets/site-data.js`: source of truth for repeated business data.
+- `assets/site-render.js`: applies that data while preserving readable HTML fallbacks.
+
+## Project rules
+
+### Local rules
+
+- Keep visible UI copy in natural Spanish Unicode. Preserve accents, punctuation, brand spelling, and verified business text exactly.
+- Use README, versioned data, or user confirmation for business facts. Do not invent products, benefits, schedules, service areas, shipping terms, ratings, or contact details.
+- Edit repeated phone, WhatsApp, address, hours, social, Maps, rating, and commercial values in `assets/site-data.js`.
+- Keep `data-site-*` bindings and readable HTML fallbacks synchronized.
+- Preserve confirmed categories, identity, assets, accessibility, and simple responsive structure; do not add unverified products.
+- Keep direct `index.html` opening and static Vercel `Other` deployment functional.
+- Do not add frameworks, package managers, build steps, or dependencies unless explicitly requested.
+
+## Validation
+
+### Site checks
+
+```sh
+node tools/check-site-data.mjs
+```
+
+- Run it after changing HTML, bindings, or business data.
+- For visual or content changes, open `index.html` and check responsive layout, links, fallbacks, semantics, image alternatives, labels, and meta description.
