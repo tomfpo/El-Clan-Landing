@@ -6,7 +6,7 @@
     metaDescription:
       "Papelera El Clan: comercialización y distribución de artículos descartables, embalajes, bolsas y papelera en El Pato. WhatsApp: 011 2331-6141.",
     heroCopy:
-      "Comercialización y distribución de artículos descartables, embalajes, bolsas y papelera para comercios, emprendimientos y hogares. Atención en El Pato.",
+      "Insumos descartables y de embalaje para comercios, gastronomía y empresas.",
     footerTagline: "Venta por mayor y menor en El Pato.",
     distributionText:
       "Comercialización y distribución de artículos descartables y embalajes.",
