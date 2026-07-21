@@ -21,7 +21,7 @@
       "https://www.google.com/maps/place/Papelera+El+Clan/@-34.886042,-58.1737089,17z/data=!3m1!4b1!4m6!3m5!1s0x95a2d96fcdf57373:0x3ab7d14e24203caf!8m2!3d-34.8860421!4d-58.168838!16s%2Fg%2F11xs3ndbkm?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     instagramDisplay: "@papeleraelclan",
     instagramUrl: "https://www.instagram.com/papeleraelclan/",
-    googleRating: "5.0 en Google Maps (14 opiniones)",
+    googleRating: "5.0 en Google Maps (18 opiniones)",
     businessHours: Object.freeze([
       Object.freeze({
         label: "Lunes a viernes",
