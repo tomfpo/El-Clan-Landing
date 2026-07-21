@@ -1,0 +1,14 @@
+# Repository-only files
+.git/
+.github/
+.gitignore
+.agent-tmp/
+AGENTS.md
+README.md
+tools/
+
+# Local brand masters and original packages
+assets/brand/reference/
+assets/brand/source/
+assets/fonts/licenses/
+assets/fonts/source/

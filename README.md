@@ -9,7 +9,9 @@ o desplegar en Vercel sin build.
 - `styles.css`: estilos responsive y presentación visual.
 - `assets/site-data.js`: fuente única para datos comerciales repetidos.
 - `assets/site-render.js`: aplica esos datos y conserva fallbacks legibles.
-- `assets/brand/`: imágenes de marca y recursos visuales.
+- `assets/brand/web/`: logos vectoriales optimizados que utiliza la landing.
+- `assets/fonts/web/`: fuentes WOFF2 utilizadas por el sitio.
+- `assets/fonts/licenses/`: licencias de las fuentes redistribuidas.
 - `assets/icons/`: favicons e iconos para navegadores y dispositivos.
 - `tools/check-site-data.mjs`: control de divergencias en datos comerciales.
 - `vercel.json`: configuración mínima para servir los archivos estáticos.
@@ -37,8 +39,23 @@ También puede ejecutarse antes de editar para obtener un baseline. Los cambios
 visuales o de contenido deben revisarse en el navegador, incluyendo layout
 responsive, enlaces, fallbacks, semántica, textos alternativos y metadatos.
 
+## Assets locales de marca
+
+Los masters editables, referencias de identidad y paquetes tipográficos
+originales se conservan localmente en estas rutas:
+
+- `assets/brand/source/`
+- `assets/brand/reference/`
+- `assets/fonts/source/`
+
+Estas carpetas están excluidas de Git y de Vercel. El repositorio público sólo
+versiona las exportaciones web necesarias y las licencias correspondientes.
+
 ## Deploy en Vercel
 
 1. Importar el repositorio en Vercel.
 2. Seleccionar `Other` como framework.
 3. Usar la raíz del proyecto como directorio de salida.
+
+`.vercelignore` evita publicar documentación, herramientas de validación,
+masters de marca, referencias y paquetes fuente que no necesita la landing.

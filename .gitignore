@@ -7,3 +7,8 @@ build/
 
 # Agent scratch space
 /.agent-tmp/
+
+# Local brand masters and original font packages
+/assets/brand/reference/
+/assets/brand/source/
+/assets/fonts/source/
