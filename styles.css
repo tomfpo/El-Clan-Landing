@@ -337,6 +337,14 @@ h2 {
   color: var(--color-on-primary);
 }
 
+.eyebrow--section::before {
+  width: 1.5rem;
+  height: 0.35rem;
+  flex: 0 0 auto;
+  background: var(--color-accent);
+  content: "";
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -481,21 +489,11 @@ h2 {
 }
 
 .brand-poster__categories li {
-  display: grid;
   padding: 0.65rem 0;
-  grid-template-columns: 2rem 1fr;
-  align-items: baseline;
   border-bottom: 1px solid rgba(255, 255, 255, 0.65);
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 0.95;
-}
-
-.brand-poster__categories span {
-  color: var(--color-accent);
-  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
-  font-size: 0.66rem;
-  font-weight: 800;
 }
 
 .brand-poster > p {
@@ -515,24 +513,16 @@ h2 {
 }
 
 .brand-values article {
+  display: flex;
   min-height: 14rem;
   padding: clamp(1.5rem, 3vw, 2.5rem);
+  flex-direction: column;
+  justify-content: flex-end;
   border-right: var(--border);
 }
 
 .brand-values article:last-child {
   border-right: 0;
-}
-
-.brand-values article > span {
-  display: inline-flex;
-  margin-bottom: clamp(2rem, 4vw, 4rem);
-  padding: 0.3rem 0.45rem;
-  background: var(--color-accent);
-  color: var(--color-primary);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
 }
 
 .brand-values h2 {
@@ -613,11 +603,8 @@ h2 {
   grid-column: span 7;
 }
 
-.product-card__number {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.product-card > div {
+  margin-top: auto;
 }
 
 .product-card h3 {
@@ -809,20 +796,8 @@ h2 {
   color: var(--color-on-primary);
 }
 
-.service-grid article > span {
-  display: inline-flex;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-bottom: auto;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid currentColor;
-  font-size: 0.7rem;
-  font-weight: 800;
-}
-
 .service-grid h3 {
-  margin: clamp(5rem, 9vw, 8rem) 0 1rem;
+  margin: auto 0 1rem;
   font-size: clamp(2.75rem, 4.5vw, 4.5rem);
 }
 
@@ -1199,10 +1174,6 @@ h2 {
     text-transform: uppercase;
   }
 
-  .mobile-nav a span {
-    font-size: 0.66rem;
-  }
-
   .hero::after {
     width: 1rem;
   }
@@ -1276,10 +1247,6 @@ h2 {
     border-bottom: 0;
   }
 
-  .brand-values article > span {
-    margin-bottom: 2rem;
-  }
-
   .brand-values h2 {
     overflow-wrap: anywhere;
     font-size: clamp(1.75rem, 8.55vw, 3.25rem);
@@ -1331,7 +1298,7 @@ h2 {
   }
 
   .service-grid h3 {
-    margin-top: 5rem;
+    margin-top: auto;
   }
 
   .contact-details > div {
