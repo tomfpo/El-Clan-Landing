@@ -4,12 +4,12 @@
   window.PapeleraElClanSiteData = Object.freeze({
     brandName: "Papelera El Clan",
     metaDescription:
-      "Papelera El Clan: comercializacion y distribucion de articulos descartables, embalajes, bolsas y papelera en El Pato. WhatsApp: 011 2331-6141.",
+      "Papelera El Clan: comercialización y distribución de artículos descartables, embalajes, bolsas y papelera en El Pato. WhatsApp: 011 2331-6141.",
     heroCopy:
-      "Comercializacion y distribucion de articulos descartables, embalajes, bolsas y papelera para comercios, emprendimientos y hogares. Atencion en El Pato.",
+      "Comercialización y distribución de artículos descartables, embalajes, bolsas y papelera para comercios, emprendimientos y hogares. Atención en El Pato.",
     footerTagline: "Venta por mayor y menor en El Pato.",
     distributionText:
-      "Comercializacion y distribucion de articulos descartables y embalajes.",
+      "Comercialización y distribución de artículos descartables y embalajes.",
     whatsappDisplay: "011 2331-6141",
     whatsappUrl: "https://wa.me/5491123316141",
     whatsappAria: "Contactar por WhatsApp al 011 2331-6141",
@@ -28,7 +28,7 @@
         value: "9 a.m. a 1:30 p.m. y 5 p.m. a 8 p.m.",
       }),
       Object.freeze({
-        label: "Sabado",
+        label: "Sábado",
         value: "9 a.m. a 1 p.m.",
       }),
       Object.freeze({
