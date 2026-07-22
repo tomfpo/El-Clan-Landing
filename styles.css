@@ -819,7 +819,7 @@ h2 {
 }
 
 .contact__intro h2 {
-  max-width: 8ch;
+  max-width: 12ch;
   font-size: clamp(4.5rem, 8vw, 8.5rem);
 }
 
@@ -1257,6 +1257,10 @@ h2 {
   .contact__intro h2 {
     overflow-wrap: anywhere;
     font-size: clamp(2.5rem, 17vw, 6rem);
+  }
+
+  .contact__intro h2 {
+    overflow-wrap: normal;
   }
 
   .product-card,
