@@ -42,14 +42,11 @@ responsive, enlaces, fallbacks, semántica, textos alternativos y metadatos.
 ## Assets locales de marca
 
 Los masters editables, referencias de identidad y paquetes tipográficos
-originales se conservan localmente en estas rutas:
-
-- `assets/brand/source/`
-- `assets/brand/reference/`
-- `assets/fonts/source/`
-
-Estas carpetas están excluidas de Git y de Vercel. El repositorio público sólo
-versiona las exportaciones web necesarias y las licencias correspondientes.
+originales se conservan fuera del repositorio, en `02 Marca` de la biblioteca
+local indicada por `docs/project-context.local.md`. Las rutas equivalentes bajo
+`assets/` permanecen excluidas de Git y Vercel para evitar una reintroducción
+accidental. El repositorio público sólo versiona las exportaciones web necesarias
+y las licencias correspondientes.
 
 ## Deploy en Vercel
 
