@@ -12,3 +12,6 @@ build/
 /assets/brand/reference/
 /assets/brand/source/
 /assets/fonts/source/
+
+# Machine-local project context
+/docs/project-context.local.md
